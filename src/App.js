@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Rotas from "./Routes/routes";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <>
+      <Header/>
+  <div>
+    <Rotas/>
     </div>
-  );
+    </>
+//para um componente ficar estático, é necessário chamá-lo no App
+//para deixá-lo assim. Se eu sair de uma página para outra,
+//o componente continuará no mesmo lugar
+);
 }
 
 export default App;
+
